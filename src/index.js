@@ -5,13 +5,13 @@ import { Provider } from "react-redux";
 
 import configureStore from "./store";
 
-import App from "./App";
+import Router from "./Router";
 
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router />
   </Provider>,
   document.getElementById("root")
 );

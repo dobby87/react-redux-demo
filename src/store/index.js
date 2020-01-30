@@ -4,7 +4,7 @@ import { all } from "redux-saga/effects";
 import createSagaMiddleware from "redux-saga";
 
 // sagas
-// import todosSaga from "./todos/saga";
+import testSaga from "./test/saga";
 
 // reducers
 import test from "./test/ducks";
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
 });
 
 function* rootSaga() {
-  // yield all([todosSaga()]);
+  yield all([testSaga()]);
 }
 
 const configureStore = (initialState, options) => {

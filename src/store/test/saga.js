@@ -1,19 +1,21 @@
-import { TEST_SAGA_ACTION } from "./types";
-import { all, call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { TEST_SAGA_ACTION, TEST_SAGA_ASYNC_ACTION } from "./types";
+import {
+  all,
+  call,
+  put,
+  takeEvery,
+  takeLatest,
+  delay
+} from "redux-saga/effects";
 // import axios from "axios";
 
-const testPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    return "test promise";
-  }, 3000);
-});
-
-function* getTodosSaga(action) {
+function* getTestSaga(action) {
   try {
-    const ret = yield testPromise();
+    console.log("b");
+    yield delay(3000);
     yield put({
-      type: TEST_SAGA_ACTION,
-      payload: ret
+      type: TEST_SAGA_ASYNC_ACTION,
+      payload: "saga activated"
     });
   } catch (e) {
     console.error(e);
@@ -30,11 +32,11 @@ function* getTodosSaga(action) {
 
 // watcher
 function* actionWatcher() {
-  yield takeEvery(TEST_SAGA_ACTION, getTodosSaga);
+  yield takeEvery(TEST_SAGA_ACTION, getTestSaga);
   // yield takeEvery(CREATE_TODO, createTodo);
 }
 
 // combine sagas
-export default function* todosSaga() {
+export default function* testSaga() {
   yield all([actionWatcher()]);
 }

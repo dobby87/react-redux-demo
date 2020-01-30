@@ -1,4 +1,4 @@
-import { TEST_ACTION, TEST_SAGA_ACTION } from "./types";
+import { TEST_ACTION, TEST_SAGA_ACTION, TEST_SAGA_ASYNC_ACTION } from "./types";
 
 // actions
 export const testAction = payload => ({
@@ -22,6 +22,12 @@ const reducer = (state = initialState, action = {}) => {
       };
 
     case TEST_SAGA_ACTION:
+      console.log("a");
+      return {
+        ...state
+      };
+    case TEST_SAGA_ASYNC_ACTION:
+      console.log("c");
       return {
         ...state,
         sagaText: action.payload

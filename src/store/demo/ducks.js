@@ -1,4 +1,4 @@
-import { DEMO_ACTION, DEMO_SAGA_ACTION, DEMO_SAGA_ASYNC_ACTION } from "./types";
+import { DEMO_REQUEST, DEMO_SUCCESS, DEMO_FAILURE, DEMO_ACTION } from "./types";
 
 // actions
 export const demoAction = payload => ({
@@ -9,8 +9,10 @@ export const demoAction = payload => ({
 // initial state
 const initialState = {
   str: "asd",
-  obj: {},
-  arr: []
+  obj: {
+    title: "demo component"
+  },
+  arr: ["arr1", "arr2", "arr3", "arr4", "arr5"]
 };
 
 // reducer
@@ -19,21 +21,22 @@ const reducer = (state = initialState, action = {}) => {
     case DEMO_ACTION:
       return {
         ...state,
-        text: action.payload
+        str: "demo action"
       };
-
-    case DEMO_SAGA_ACTION:
-      console.log("a");
+    case DEMO_REQUEST:
       return {
         ...state
       };
-    case DEMO_SAGA_ASYNC_ACTION:
+    case DEMO_SUCCESS:
       console.log("c");
       return {
         ...state,
-        sagaText: action.payload
+        str: action.payload
       };
-
+    case DEMO_FAILURE:
+      return {
+        ...state
+      };
     default:
       return state;
   }

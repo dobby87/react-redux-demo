@@ -33,6 +33,7 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         sagaText: action.payload
       };
+
     default:
       return state;
   }

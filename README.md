@@ -8,6 +8,7 @@ Create-React-App 기반 데모 프로젝트
 {
   "axios": "^0.19.2",
   "classnames": "^2.2.6",
+  "connected-react-router": "^6.6.1",
   "node-sass": "^4.13.1",
   "react": "^16.12.0",
   "react-dom": "^16.12.0",
@@ -60,3 +61,7 @@ constants 폴더에서 분류하여 각각의 파일에서 js object 로 관리
 ## redux-action pattern
 
 redux-action 패턴 숙지 후 활용 예정
+
+## connected-react-router
+
+Synchronize router state with redux store through uni-directional flow

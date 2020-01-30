@@ -4,6 +4,7 @@ Create-React-App 기반 데모 프로젝트
 
 ```json
 {
+  "axios": "^0.19.2",
   "classnames": "^2.2.6",
   "node-sass": "^4.13.1",
   "react": "^16.12.0",

@@ -1,8 +1,8 @@
-### Create-React-App
+## Create-React-App
 
 Create-React-App 기반 데모 프로젝트
 
-### dependancies
+## dependancies
 
 ```json
 {
@@ -19,7 +19,7 @@ Create-React-App 기반 데모 프로젝트
 }
 ```
 
-### style
+## style
 
 sass.module + classnames 기반
 
@@ -27,28 +27,36 @@ classname 자동생성
 
 classname + hash 값으로 중복 classname 방지
 
-### store pattern
+## store pattern
 
 redux + ducks + saga
 
-### 비동기통신
+## 비동기통신
 
 axios + redux-saga
 
-### type check
+## type check
 
 prop-type or typescript 고려중
 
-### depth pattern
+## depth pattern
 
-### router
+compoent folder 당 2-depth 까지만 허용
+
+1-Depth : 1DepthFileName
+
+2-Depth : 1DepthFileName + 2DepthFileName
+
+3-Depth : UniqueFileName(3Depth FileName)
+
+## router
 
 react-router-dom
 
-### static object management
+## static object management
 
 constants 폴더에서 분류하여 각각의 파일에서 js object 로 관리
 
-### redux-action pattern
+## redux-action pattern
 
 redux-action 패턴 숙지 후 활용 예정

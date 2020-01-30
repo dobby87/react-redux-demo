@@ -1,0 +1,2 @@
+export const TEST_ACTION = "TEST/TEST_ACTION";
+export const TEST_SAGA_ACTION = "TEST/TEST_SAGA_ACTION";

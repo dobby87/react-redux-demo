@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { HEADER_TXT } from "../../constants/header";
+import { HEADER_TXT } from "../../constants/layout";
 
 // style file name === class name
 import styles from "./header.module.scss";

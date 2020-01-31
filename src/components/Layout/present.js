@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header";
+import Menu from "../Menu";
 
 // style file name === class name
 // import styles from "./header.module.scss";
@@ -11,6 +12,7 @@ const Layout = () => {
   return (
     <>
       <Header />
+      <Menu />
     </>
   );
 };

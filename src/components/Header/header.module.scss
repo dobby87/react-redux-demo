@@ -1,3 +1,94 @@
+@import "../../static//styles/index.scss";
+
 .container {
-  font-size: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 1440px;
+  height: 72px;
+  background-color: $w-100;
+  border-bottom: 1px solid $g-015;
+}
+
+.l-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.l-menu {
+  width: 60px;
+  height: 100%;
+}
+
+.r-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  li {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.title {
+  // TODO: font 재적용 후 수정해야함
+  font-weight: 400;
+  color: $mg-100;
+}
+
+.t-menu {
+  width: 60px;
+  height: 100%;
+}
+.o-menu {
+  width: 60px;
+  height: 100%;
+  border-left: 1px solid $g-015;
+  border-right: 1px solid $g-015;
+}
+.r-menu {
+  height: 100%;
+  padding: 0 36px;
+}
+
+.action-panel {
+  position: absolute;
+  top: 72px;
+  right: 0;
+  width: 100%;
+
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  color: #354052;
+  text-align: left;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+
+  &.active {
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+    border-bottom: 1px solid $g-015;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 }

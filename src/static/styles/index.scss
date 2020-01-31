@@ -1,7 +1,45 @@
 @charset "utf-8";
+@import "./reset.scss";
 
-// @import "./reset.scss";
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
+// color variables
+$mg-100: #00c690;
+$mg-015: #d9f7ee;
+$wsg-100: #fcfcfd;
+$w-090: rgba(255, 255, 255, 0.9);
+$g-015: #e1e1e5;
+$g-030: #c3c3ca;
+$g-050: #9c9ca7;
+$b-070: rgba(0, 0, 0, 0.7);
+$g-006: #f3f3f5;
+$b-050: rgba(0, 0, 0, 0.5);
+$b-010: #eafaff;
+$sg-080: rgba(0, 190, 103, 0.8);
+$mg-080: #33d1a6;
+$ws-100: #f8f9fa;
+$facebook: #2e6db5;
+$mg-030: #b2eedd;
+$bg-01: #eff3f5;
+$g-065: #7e7e8c;
+$r-010: #ffebeb;
+$w-040: rgba(255, 255, 255, 0.4);
+$w-020: rgba(255, 255, 255, 0.2);
+$kakao-b: #391b1b;
+$so-012: #fff4e5;
+$ng-080: #565e6b;
+$w-070: rgba(255, 255, 255, 0.7);
+$sb-070: #727dd5;
+$sb-006: #f3f4fc;
+$gb-060: rgba(56, 56, 56, 0.6);
+$so-100: #ff8900;
+$b-087: #212121;
+$jg-100: #009a70;
+$kakao-y: #fae300;
+$mg-006: #f0fcf9;
+$b-100: #00c4ff;
+$w-100: #ffffff;
+$r-100: #ef4949;
+
+// @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
 
 * {
   margin: 0;
@@ -9,6 +47,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
+body {
+  font-family: "NanumSquare", sans-serif;
 }

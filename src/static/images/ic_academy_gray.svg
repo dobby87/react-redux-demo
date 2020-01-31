@@ -1,0 +1,15 @@
+<svg id="ic_academy_gray" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_807" data-name="Group 807" transform="translate(-98 -410)" opacity="0">
+    <rect id="Rectangle_1627" data-name="Rectangle 1627" width="24" height="24" transform="translate(98 410)" fill="#fff"/>
+  </g>
+  <g id="ic_search_academy" transform="translate(-16 -301)">
+    <path id="사각형_1015" data-name="사각형 1015" d="M.861,0h9.278A.9.9,0,0,1,11,.939V15H0V.939A.9.9,0,0,1,.861,0Z" transform="translate(22.5 306)" fill="#565e6b"/>
+    <rect id="사각형_1016" data-name="사각형 1016" width="14" height="2.129" rx="0.5" transform="translate(21 318.871)" fill="#565e6b"/>
+    <rect id="사각형_1017" data-name="사각형 1017" width="2" height="2" rx="0.3" transform="translate(24.957 308.8)" fill="#fff"/>
+    <rect id="사각형_1019" data-name="사각형 1019" width="2" height="2" rx="0.3" transform="translate(24.957 312.307)" fill="#fff"/>
+    <rect id="사각형_1022" data-name="사각형 1022" width="2" height="2" rx="0.3" transform="translate(24.957 315.757)" fill="#fff"/>
+    <rect id="사각형_1018" data-name="사각형 1018" width="2" height="2" rx="0.3" transform="translate(28.914 308.8)" fill="#fff"/>
+    <rect id="사각형_1020" data-name="사각형 1020" width="2" height="2" rx="0.3" transform="translate(28.914 312.307)" fill="#fff"/>
+    <rect id="사각형_1023" data-name="사각형 1023" width="2" height="2" rx="0.3" transform="translate(28.914 315.757)" fill="#fff"/>
+  </g>
+</svg>

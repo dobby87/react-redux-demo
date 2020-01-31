@@ -13,7 +13,9 @@ const cx = classNames.bind(styles);
 const Header = () => {
   const dispatch = useDispatch();
   // get state
-  const { isOpenUserMenu } = useSelector(state => state.layout);
+  const { isOpenUserMenu, isSimpleMainMenu } = useSelector(
+    state => state.layout
+  );
   const handleUserMenuClick = () => {
     dispatch(userMenuToggle());
   };
@@ -24,7 +26,10 @@ const Header = () => {
   return (
     <div className={cx("container")}>
       <div className={cx("l-wrap")}>
-        <button className={cx("l-menu")} onClick={handleMainMenuButtonClick}>
+        <button
+          className={cx("main-menu-btn", !isSimpleMainMenu && "active")}
+          onClick={handleMainMenuButtonClick}
+        >
           menu
         </button>
         <h1 className={cx("title")}>{HEADER_TXT.title}</h1>

@@ -25,9 +25,21 @@
   align-items: center;
 }
 
-.l-menu {
+.main-menu-btn {
   width: 60px;
   height: 100%;
+  background-image: url("../../static/images/ic_menu_gray.svg");
+  background-size: 24px 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-indent: -999em;
+
+  &:hover {
+    background-image: url("../../static/images/ic_menu_green.svg");
+  }
+  &.active {
+    background-image: url("../../static/images/ic_menu_green.svg");
+  }
 }
 
 .r-wrap {

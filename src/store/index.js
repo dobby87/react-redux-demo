@@ -10,10 +10,12 @@ import demoSaga from "./demo/saga";
 // reducers
 import test from "./test/ducks";
 import demo from "./demo/ducks";
+import layout from "./layout/ducks";
 
 const rootReducer = combineReducers({
   test,
-  demo
+  demo,
+  layout
 });
 
 export function* rootSaga() {

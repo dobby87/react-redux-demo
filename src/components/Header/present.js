@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { HEADER_TXT } from "../../constants/layout";
+import { userMenuToggle } from "../../store/layout/ducks";
 
 // style file name === class name
 import styles from "./header.module.scss";
@@ -10,9 +11,12 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 const Header = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // get state
-  // const { text, sagaText } = useSelector(state => state.test);
+  const { isOpenUserMenu } = useSelector(state => state.layout);
+  const handleUserMenuClick = () => {
+    dispatch(userMenuToggle());
+  };
 
   return (
     <div className={cx("container")}>
@@ -22,14 +26,16 @@ const Header = () => {
       </div>
       <ul className={cx("r-wrap")}>
         <li>
-          <button className={cx("t-menu")}>contact button</button>
+          <button className={cx("contact-btn")}>contact button</button>
         </li>
         <li>
-          <button className={cx("o-menu")}>option button</button>
+          <button className={cx("option-btn")}>option button</button>
         </li>
         <li>
-          <button className={cx("r-menu")}>right mene button</button>
-          <ul className={cx("action-panel", false && "active")}>
+          <button className={cx("user-menu-btn")} onClick={handleUserMenuClick}>
+            user-menu-btn
+          </button>
+          <ul className={cx("action-panel", isOpenUserMenu && "active")}>
             <li>
               <NavLink to="/" activeStyle={{}}>
                 정자핑크에듀영어학원

@@ -47,27 +47,28 @@
   color: $mg-100;
 }
 
-.t-menu {
+.contact-btn {
   width: 60px;
   height: 100%;
 }
-.o-menu {
+.option-btn {
   width: 60px;
   height: 100%;
   border-left: 1px solid $g-015;
   border-right: 1px solid $g-015;
 }
-.r-menu {
+.user-menu-btn {
+  width: auto;
+  min-width: 120px;
   height: 100%;
   padding: 0 36px;
 }
 
 .action-panel {
   position: absolute;
-  top: 72px;
+  top: 65px;
   right: 0;
   width: 100%;
-
   overflow: hidden;
   font-size: 16px;
   font-weight: 400;
@@ -78,18 +79,37 @@
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.13);
   cursor: pointer;
 
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+
   &.active {
+    top: 72px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
   }
 
   li {
-    display: flex;
-    align-items: center;
     height: 50px;
     padding: 0 16px;
-    border-bottom: 1px solid $g-015;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border-bottom: 1px solid $g-015;
+    }
 
     &:last-child {
-      border-bottom: 0;
+      & > a {
+        border-bottom: 0;
+      }
     }
   }
 }

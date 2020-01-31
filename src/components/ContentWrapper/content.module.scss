@@ -1,0 +1,19 @@
+@import "../../static/styles/index.scss";
+.container {
+  width: 100%;
+  background: $g-050;
+  padding-top: 89px;
+  padding-left: 257px;
+  padding-right: 17px;
+  padding-bottom: 17px;
+
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+
+  &.simplify {
+    padding-left: 77px;
+  }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { HEADER_TXT } from "../../constants/layout";
-import { userMenuToggle } from "../../store/layout/ducks";
+import { userMenuToggle, mainMenuToggle } from "../../store/layout/ducks";
 
 // style file name === class name
 import styles from "./header.module.scss";
@@ -17,11 +17,16 @@ const Header = () => {
   const handleUserMenuClick = () => {
     dispatch(userMenuToggle());
   };
+  const handleMainMenuButtonClick = () => {
+    dispatch(mainMenuToggle());
+  };
 
   return (
     <div className={cx("container")}>
       <div className={cx("l-wrap")}>
-        <button className={cx("l-menu")}>menu</button>
+        <button className={cx("l-menu")} onClick={handleMainMenuButtonClick}>
+          menu
+        </button>
         <h1 className={cx("title")}>{HEADER_TXT.title}</h1>
       </div>
       <ul className={cx("r-wrap")}>

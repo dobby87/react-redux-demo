@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-// import { useSelector, useDispatch } from "react-redux";
+// import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import { MENU_TXT } from "../../constants/layout";
 
@@ -13,10 +13,10 @@ const cx = classNames.bind(styles);
 const Menu = () => {
   // const dispatch = useDispatch();
   // get state
-  // const { text, sagaText } = useSelector(state => state.test);
+  const { isSimpleMainMenu } = useSelector(state => state.layout);
 
   return (
-    <div className={cx("container")}>
+    <div className={cx("container", isSimpleMainMenu && "simplify")}>
       <ul className={cx("main-list")}>
         <li>
           <span>{MENU_TXT.HOME}</span>

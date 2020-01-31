@@ -28,7 +28,6 @@ const reducer = (state = initialState, action = {}) => {
         ...state
       };
     case DEMO_SUCCESS:
-      console.log("c");
       return {
         ...state,
         str: action.payload

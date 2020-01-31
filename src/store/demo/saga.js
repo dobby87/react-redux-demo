@@ -10,7 +10,6 @@ import {
 // import axios from "axios";
 
 function* getDemoSaga(action) {
-  console.log("a");
   try {
     // call api
     yield delay(3000);
@@ -19,7 +18,6 @@ function* getDemoSaga(action) {
       type: DEMO_SUCCESS,
       payload: "demo saga activated"
     });
-    console.log("b");
   } catch (e) {
     // error log
     console.error(e);

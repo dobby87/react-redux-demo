@@ -1,6 +1,4 @@
-import { createBrowserHistory } from "history";
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
-import { connectRouter, routerMiddleware } from "connected-react-router";
 
 import { all } from "redux-saga/effects";
 import createSagaMiddleware from "redux-saga";
@@ -13,23 +11,20 @@ import demoSaga from "./demo/saga";
 import test from "./test/ducks";
 import demo from "./demo/ducks";
 
-const rootReducer = history =>
-  combineReducers({
-    router: connectRouter(history),
-    test,
-    demo
-  });
+const rootReducer = combineReducers({
+  test,
+  demo
+});
 
-function* rootSaga() {
+export function* rootSaga() {
   yield all([testSaga(), demoSaga()]);
 }
 
-export const history = createBrowserHistory();
+export const sagaMiddleware = createSagaMiddleware();
 
 const configureStore = (initialState, options) => {
-  const sagaMiddleware = createSagaMiddleware();
+  const middlewares = [sagaMiddleware];
 
-  const middlewares = [sagaMiddleware, routerMiddleware];
   const enhancer =
     process.env.NODE_ENV === "production"
       ? compose(applyMiddleware(...middlewares))
@@ -39,8 +34,7 @@ const configureStore = (initialState, options) => {
             ? window.__REDUX_DEVTOOLS_EXTENSION__()
             : f => f
         );
-  const store = createStore(rootReducer(history), initialState, enhancer);
-  sagaMiddleware.run(rootSaga);
+  const store = createStore(rootReducer, initialState, enhancer);
 
   return store;
 };

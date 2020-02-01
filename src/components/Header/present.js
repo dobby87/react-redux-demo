@@ -30,7 +30,7 @@ const Header = () => {
           className={cx("main-menu-btn", !isSimpleMainMenu && "active")}
           onClick={handleMainMenuButtonClick}
         >
-          menu
+          mene test
         </button>
         <h1 className={cx("title")}>{HEADER_TXT.title}</h1>
       </div>

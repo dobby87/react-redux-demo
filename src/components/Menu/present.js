@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 const Menu = () => {
   // const dispatch = useDispatch();
   // get state
-  const { isSimpleMainMenu } = useSelector(state => state.layout);
+  const { isSimpleMainMenu, mainMenu } = useSelector(state => state.layout);
 
   return (
     <div className={cx("container", isSimpleMainMenu && "simplify")}>
@@ -22,43 +22,36 @@ const Menu = () => {
           <span>{MENU_TXT.HOME}</span>
         </li>
         <li>
-          <span>{MENU_TXT.COURSE_SETTING.TITLE}</span>
-          <ul>
-            <li>a</li>
-            <li>b</li>
-          </ul>
-        </li>
-        <li>
           <span>{MENU_TXT.STUDENT_MANAGEMENT.TITLE}</span>
-          <ul>
+          <ul className={cx("sub-list")}>
             <li>a</li>
             <li>b</li>
           </ul>
         </li>
         <li>
           <span>{MENU_TXT.ACADEMY_MANAGEMENT.TITLE}</span>
-          <ul>
+          <ul className={cx("sub-list")}>
             <li>a</li>
             <li>b</li>
           </ul>
         </li>
         <li>
           <span>{MENU_TXT.AD_SETTING.TITLE}</span>
-          <ul>
+          <ul className={cx("sub-list")}>
             <li>a</li>
             <li>b</li>
           </ul>
         </li>
         <li>
           <span>{MENU_TXT.STATISTICAL_REPORT.TITLE}</span>
-          <ul>
+          <ul className={cx("sub-list")}>
             <li>a</li>
             <li>b</li>
           </ul>
         </li>
         <li>
           <span>{MENU_TXT.SERVICE_CENTER.TITLE}</span>
-          <ul>
+          <ul className={cx("sub-list")}>
             <li>a</li>
             <li>b</li>
           </ul>
